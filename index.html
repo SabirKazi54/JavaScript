@@ -18,6 +18,16 @@
   </head>
   <body>
     <div id="mybox">Click Me</div>
-    <script></script>
+    <script>
+      function changeColor() {
+        event.target.style.backgroundColor = "tomato";
+        event.target.textContent = "ouch";
+      }
+      const myBox = document.getElementById("mybox");
+      myBox.addEventListener("click", function () {
+        event.target.style.backgroundColor = "tomato";
+        event.target.textContent = "ouch";
+      });
+    </script>
   </body>
 </html>
