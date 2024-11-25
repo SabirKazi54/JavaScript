@@ -23,12 +23,12 @@
     <div id="mybox">Click Me</div>
     <script>
       const myBox = document.getElementById("mybox");
-      const moveAmount = 10;
+      const moveAmount = 20;
       let x = 0;
       let y = 0;
 
       document.addEventListener("keydown", function (event) {
-        if ((event.key, startWith("Arrow"))) {
+        if (event.key.startsWith("Arrow")) {
           switch (event.key) {
             case "ArrowUp":
               y -= moveAmount;
