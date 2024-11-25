@@ -18,20 +18,26 @@
   </head>
   <body>
     <div id="mybox">Click Me</div>
+    <button id="button">button</button>
     <script>
       function changeColor() {
         event.target.style.backgroundColor = "tomato";
         event.target.textContent = "ouch";
       }
+      const myButton = document.getElementById("button");
       const myBox = document.getElementById("mybox");
       myBox.addEventListener("click", function () {
         event.target.style.backgroundColor = "tomato";
         event.target.textContent = "ouch";
       });
 
-      myBox.addEventListener("mouseover", (event) => {
-        event.target.style.backgroundColor = "red";
-        event.target.textContent = "dont enter";
+      myButton.addEventListener("click", (event) => {
+        myBox.target.style.backgroundColor = "red";
+        myBox.target.textContent = "dont enter";
+      });
+      myBox.addEventListener("mouseout", (event) => {
+        event.target.style.backgroundColor = "green";
+        event.target.textContent = "thx";
       });
     </script>
   </body>
